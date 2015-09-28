@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/left_drawer"
+    android:layout_width="306dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#ff263238"
+    android:orientation="vertical"
+    android:textColor="#fff">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <LinearLayout
+            android:id="@+id/drawer_account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:onClick="onEditAccount"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/drawer_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="65dp"
+                android:gravity="center_vertical"
+                android:textColor="#fff"
+                tools:text="name"
+                android:textSize="16sp"
+                android:layout_weight="0.8"/>
+
+            <TextView
+                android:id="@+id/edit_account"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:height="60dp"
+                android:focusable="false"
+                android:gravity="center_vertical|right"
+                android:text="編集"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/left_drawer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:onClick="onClickAd"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        />
+
+</LinearLayout>
